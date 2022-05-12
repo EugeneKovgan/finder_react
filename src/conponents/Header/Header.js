@@ -4,7 +4,7 @@ import search_icon from '../../assets/svg/search_icon.svg';
 const Header = () => {
     return (
         <div className='Header'>
-            <div className='header_content-container'>
+            <div className='header__content-container'>
                 <div className='logo-img'>
                     <img src={logo_git} alt='' />
                 </div>
