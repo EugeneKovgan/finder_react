@@ -9,7 +9,13 @@ const Header = () => {
                     <img src={logo_git} alt='' />
                 </div>
                 <div className='header-search'>
-                    <input className='header-search_input' type='text' name='' id='' placeholder='gaearon|' />
+                    <input
+                        className='header-search_input'
+                        type='text'
+                        name=''
+                        id=''
+                        placeholder='Enter GitHub username'
+                    />
                 </div>
             </div>
         </div>

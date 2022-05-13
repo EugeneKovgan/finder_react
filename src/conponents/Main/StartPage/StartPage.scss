@@ -1,0 +1,19 @@
+.StartPage {
+    background-color: #f9f9f9;
+    .start-page__content-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 45px;
+        img {
+            width: 64.16752624511719px;
+        }
+        .description {
+            max-width: 210px;
+            font-size: 22px;
+            line-height: 140%;
+            text-align: center;
+            color: #808080;
+        }
+    }
+}

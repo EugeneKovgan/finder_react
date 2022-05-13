@@ -1,4 +1,4 @@
-# [link_to](https://nameaccount.github.io/paralect_test/)
+# [link_to](https://eugenekovgan.github.io/paralect_test/)
 
 # Getting Started with Create React App
 
