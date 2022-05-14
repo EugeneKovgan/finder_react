@@ -1,0 +1,19 @@
+.Repositories {
+    background-color: #f9f9f9;
+    .repositories__container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .repositories_title {
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 130%;
+            color: #000000;
+        }
+        .repositories_list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+    }
+}

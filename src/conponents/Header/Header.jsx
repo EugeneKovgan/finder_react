@@ -1,12 +1,13 @@
 import './Header.scss';
 import logo_git from '../../assets/svg/git_icon.svg';
-import search_icon from '../../assets/svg/search_icon.svg';
+import { useState } from 'react';
 const Header = () => {
+    const [value, setValue] = useState('Enter GitHub username');
     return (
         <div className='Header'>
             <div className='header__content-container'>
                 <div className='logo-img'>
-                    <img src={logo_git} alt='' />
+                    <img src={logo_git} alt='logo_git' />
                 </div>
                 <div className='header-search'>
                     <input
@@ -14,7 +15,9 @@ const Header = () => {
                         type='text'
                         name=''
                         id=''
-                        placeholder='Enter GitHub username'
+                        value={value}
+                        // placeholder='Enter GitHub username'
+                        onChange={(e) => setValue(e.target.value)}
                     />
                 </div>
             </div>

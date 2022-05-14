@@ -26,6 +26,9 @@ ul {
 li {
     list-style: none;
 }
+a {
+    text-decoration: none;
+}
 [class*='__content-container'] {
     max-width: 1300px;
     margin: 0 auto;
