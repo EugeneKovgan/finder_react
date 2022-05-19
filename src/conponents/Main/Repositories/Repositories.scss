@@ -3,17 +3,17 @@
     .repositories__container {
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 1.875rem;
         .repositories_title {
             font-weight: 600;
-            font-size: 32px;
+            font-size: 2rem;
             line-height: 130%;
             color: #000000;
         }
         .repositories_list {
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 1.5625rem;
         }
     }
 }

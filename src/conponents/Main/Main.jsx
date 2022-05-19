@@ -1,17 +1,15 @@
 import './Main.scss';
-import Repositories from './Repositories/Repositories';
+import UserInfoBlock from './UserInfoBlock/UserInfoBlock';
 import StartPage from './StartPage/StartPage';
-import UserInfo from './UserInfo/UserInfo';
 import UserNotFoundPage from './UserNotFoundPage/UserNotFoundPage';
 
-const Main = () => {
+const Main = (props) => {
+
     return (
         <div className='Main'>
-            <div className='main__content-container'>
-                {/* <StartPage /> */}
-                {/* <UserNotFoundPage /> */}
-                <UserInfo />
-                <Repositories />
+            <div className='styles.main__content-container'>
+                {/* <UserInfoBlock repo={props.repo} /> */}
+                {props.repo ? <UserInfoBlock repo={props.repo} /> : <StartPage />}
             </div>
         </div>
     );

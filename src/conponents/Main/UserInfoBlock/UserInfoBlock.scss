@@ -1,0 +1,14 @@
+.UserInfoBlock {
+    display: flex;
+    flex-direction: row;
+    gap: 4.375rem;
+    margin-top: 2.1875rem;
+    align-items: flex-start;
+    padding: 0 0.9375rem 0 0.9375rem;
+}
+
+@media (max-width: 768px) {
+    .UserInfoBlock {
+        flex-direction: column;
+    }
+}
