@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/paralect_test/static/css/main.a5924ecb.css",
-    "main.js": "/paralect_test/static/js/main.15041b2c.js",
+    "main.css": "/paralect_test/static/css/main.3a876a8c.css",
+    "main.js": "/paralect_test/static/js/main.df1a929f.js",
     "static/js/787.dc93553a.chunk.js": "/paralect_test/static/js/787.dc93553a.chunk.js",
     "static/media/logo.svg": "/paralect_test/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "static/media/git_icon.svg": "/paralect_test/static/media/git_icon.679d6967b2bf86d2191153a486c5ef0a.svg",
@@ -11,12 +11,12 @@
     "index.html": "/paralect_test/index.html",
     "static/media/user-not-found-big_icon.svg": "/paralect_test/static/media/user-not-found-big_icon.8fe7b3bb405afa93a396091fe2205290.svg",
     "static/media/following_icon.svg": "/paralect_test/static/media/following_icon.9ba374666b568706f31ebd4f9fd70b1a.svg",
-    "main.a5924ecb.css.map": "/paralect_test/static/css/main.a5924ecb.css.map",
-    "main.15041b2c.js.map": "/paralect_test/static/js/main.15041b2c.js.map",
+    "main.3a876a8c.css.map": "/paralect_test/static/css/main.3a876a8c.css.map",
+    "main.df1a929f.js.map": "/paralect_test/static/js/main.df1a929f.js.map",
     "787.dc93553a.chunk.js.map": "/paralect_test/static/js/787.dc93553a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a5924ecb.css",
-    "static/js/main.15041b2c.js"
+    "static/css/main.3a876a8c.css",
+    "static/js/main.df1a929f.js"
   ]
 }
