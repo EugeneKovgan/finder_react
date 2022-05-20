@@ -8,8 +8,7 @@ const Main = (props) => {
     return (
         <div className='Main'>
             <div className='styles.main__content-container'>
-                {/* <UserInfoBlock repo={props.repo} /> */}
-                {props.repo ? <UserInfoBlock repo={props.repo} /> : <StartPage />}
+                {props.user ? <UserInfoBlock user={props.user} repo={props.repo} /> : <StartPage />}
             </div>
         </div>
     );

@@ -6,15 +6,16 @@ import Footer from './conponents/Footer/Footer';
 import Main from './conponents/Main/Main';
 
 function App() {
+    const [user, setUser] = useState('');
     const [repo, setRepo] = useState('');
-    const hendlNameChange = (repo) => {
+    const hendlNameChange = (user, repo) => {
+        setUser(user);
         setRepo(repo);
     };
     return (
         <div className='App'>
             <Header onChange={hendlNameChange} />
-            <Main repo={repo} />
-
+            <Main user={user} repo={repo} />
             <Footer />
         </div>
     );

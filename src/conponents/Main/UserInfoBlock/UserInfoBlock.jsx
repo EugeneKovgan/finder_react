@@ -5,7 +5,7 @@ import UserInfo from '../UserInfo/UserInfo';
 const UserInfoBlock = (props) => {
     return (
         <div className='UserInfoBlock'>
-            <UserInfo repo={props.repo} />
+            <UserInfo user={props.user} />
             <Repositories repo={props.repo} />
         </div>
     );
