@@ -1,13 +1,12 @@
-import logo from './logo.svg';
-import axios from 'axios';
-
-import { useState } from 'react';
 import './App.scss';
+import axios from 'axios';
 import Header from './conponents/Header/Header';
 import Footer from './conponents/Footer/Footer';
 import Main from './conponents/Main/Main';
 import StartPage from './conponents/Main/StartPage/StartPage';
 import UserNotFoundPage from './conponents/Main/UserNotFoundPage/UserNotFoundPage';
+import { useState } from 'react';
+import Loader from './conponents/Main/Loader/Loader';
 
 function App() {
     const [user, setUser] = useState('');
@@ -51,7 +50,7 @@ function App() {
         <div className='App'>
             <Header onChange={sendRequest} />
             {loading ? (
-                'загрузка'
+                <Loader />
             ) : (
                 <>
                     {user && repo && !noUser ? (
