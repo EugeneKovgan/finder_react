@@ -22,6 +22,7 @@
 .RepositoryItem {
     .repository_item__container {
         background-color: #ffffff;
+        border-radius: 6px;
         min-height: 6.875rem;
         display: flex;
         flex-direction: column;
@@ -29,6 +30,12 @@
         padding-left: 1.875rem;
         padding-right: 0.9375rem;
         gap: 1.5625rem;
+        box-sizing: border-box;
+        transition: 0.1s;
+        border: 2px solid transparent;
+        &:hover {
+            border: 2px solid #0064eb;
+        }
         .repository_item_title {
             font-weight: 500;
             font-size: 1.5rem;

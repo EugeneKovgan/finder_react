@@ -1,11 +1,15 @@
 import './Footer.scss';
+import arrow from "../../assets/svg/arrow.svg"
 const Footer = () => {
     return (
         <div className='Footer'>
             <div className='footer__content-container'>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium, exercitationem! Aliquam quidem
-                dolore debitis recusandae? Dicta vitae possimus ad autem error eaque soluta dolor iusto, debitis hic, ab
-                neque pariatur!
+                <div className="count-items">5-8 of 249 items</div>
+                <div className="pages-block">
+                    <img className='arrow-left arrow' src={arrow} alt="arrow" />
+                    <img className='arrow-right arrow' src={arrow} alt="arrow" />
+                </div>
+
             </div>
         </div>
     );
