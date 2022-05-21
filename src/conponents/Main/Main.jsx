@@ -3,12 +3,12 @@ import UserInfoBlock from './UserInfoBlock/UserInfoBlock';
 import StartPage from './StartPage/StartPage';
 import UserNotFoundPage from './UserNotFoundPage/UserNotFoundPage';
 
-const Main = (props) => {
+const Main = ({ user, repo }) => {
 
     return (
         <div className='Main'>
             <div className='styles.main__content-container'>
-                {props.user ? <UserInfoBlock user={props.user} repo={props.repo} /> : <StartPage />}
+                <UserInfoBlock user={user} repo={repo} />
             </div>
         </div>
     );

@@ -1,5 +1,8 @@
 .UserNotFoundPage {
+    display: flex;
+    align-items: center;
     background-color: #f9f9f9;
+    flex: 1 1 auto;
     .user-not-found-page__content-container {
         display: flex;
         flex-direction: column;

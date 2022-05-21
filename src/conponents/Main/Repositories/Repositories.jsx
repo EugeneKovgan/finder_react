@@ -1,9 +1,9 @@
 import './Repositories.scss';
-// import RepositoryItem from '../RepositoryItem/RepositoryItem';
+import EmptyRepository from '../EmptyRepository/EmptyRepository';
 
-const Repositories = (props) => {
+const Repositories = ({ repo }) => {
     let counter = 0
-    let itemRepo = props.repo.map((item) => {
+    let itemRepo = repo.map((item) => {
         counter++
         return (
             <div className='RepositoryItem' key={item.id}>
@@ -22,10 +22,13 @@ const Repositories = (props) => {
     return (
         <div className='Repositories'>
             <div className='repositories__container'>
-                <div className='repositories_title'>Repositories ({counter})</div>
-                <div className='repositories_list'>
-                    {itemRepo}
-                </div>
+                {counter === 0 ? <EmptyRepository /> : <>
+                    <div className='repositories_title'>Repositories ({counter})</div>
+
+                    <div className='repositories_list'>
+                        {itemRepo}
+                    </div></>}
+
             </div>
         </div>
     );

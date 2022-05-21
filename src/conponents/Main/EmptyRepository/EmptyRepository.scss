@@ -1,10 +1,9 @@
-.StartPage {
-    display: flex;
-    align-items: center;
+.EmptyRepository {
+    margin-top: 20vh;
     background-color: #f9f9f9;
-    flex: 1 1 auto;
-
-    .start-page__content-container {
+    display: flex;
+    .empty-repository__content-container {
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -13,11 +12,17 @@
             width: 4rem;
         }
         .description {
-            max-width: 13.125rem;
+            // max-width: 13.125rem;
             font-size: 1.375rem;
             line-height: 140%;
             text-align: center;
             color: #808080;
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .EmptyRepository {
+        margin-top: -2rem;
     }
 }

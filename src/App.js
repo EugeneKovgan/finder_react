@@ -1,21 +1,68 @@
 import logo from './logo.svg';
+import axios from 'axios';
+
 import { useState } from 'react';
 import './App.scss';
 import Header from './conponents/Header/Header';
 import Footer from './conponents/Footer/Footer';
 import Main from './conponents/Main/Main';
+import StartPage from './conponents/Main/StartPage/StartPage';
+import UserNotFoundPage from './conponents/Main/UserNotFoundPage/UserNotFoundPage';
 
 function App() {
     const [user, setUser] = useState('');
     const [repo, setRepo] = useState('');
-    const hendlNameChange = (user, repo) => {
-        setUser(user);
-        setRepo(repo);
+    const [loading, setLoading] = useState(false);
+    const [noUser, setNoUser] = useState(false);
+
+    const sendRequest = async (value) => {
+        try {
+            setLoading(true);
+            const response = await axios.get(`https://api.github.com/users/${value}`);
+            const userGetedInfo = response.data;
+            setNoUser(false);
+
+            console.log(userGetedInfo);
+            setUser(userGetedInfo);
+            console.log(user.id);
+            await sendRequestRepo(value);
+        } catch (e) {
+            console.log(e);
+            setNoUser(true);
+        } finally {
+            setLoading(false);
+        }
     };
+
+    const sendRequestRepo = async (value) => {
+        try {
+            const response = await axios.get(`https://api.github.com/users/${value}/repos`);
+            const repoGetedInfo = response.data;
+
+            console.log(repoGetedInfo);
+            setRepo(repoGetedInfo);
+        } catch (e) {
+            console.log(e);
+        } finally {
+        }
+    };
+
     return (
         <div className='App'>
-            <Header onChange={hendlNameChange} />
-            <Main user={user} repo={repo} />
+            <Header onChange={sendRequest} />
+            {loading ? (
+                'загрузка'
+            ) : (
+                <>
+                    {user && repo && !noUser ? (
+                        <Main user={user} repo={repo} />
+                    ) : noUser ? (
+                        <UserNotFoundPage />
+                    ) : (
+                        <StartPage />
+                    )}
+                </>
+            )}
             <Footer />
         </div>
     );
