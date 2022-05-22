@@ -7,7 +7,7 @@ const Footer = ({ user, repo, reposOnPage, currentPage }) => {
 
     const numberOfRepos = user.public_repos;
 
-    let num = numberOfRepos / reposOnPage
+    let pagesTotal = numberOfRepos / reposOnPage
     // const [totalNumberPages, setTotalNumberPages] = useState('');
     console.log(numberOfRepos)
     console.log(reposOnPage)
@@ -18,30 +18,28 @@ const Footer = ({ user, repo, reposOnPage, currentPage }) => {
     return (
         <div className='Footer'>
             <div className='footer__content-container'>
-                <div className="count-items">1-{numberOfRepos} of {numberOfRepos} items</div>
-                <div className="pages-block">
-                    <ReactPaginate
-                        previousLabel={'<'}
-                        nextLabel={'>'}
-                        breakLabel={'...'}
-                        pageCount={num}
-                        marginPagesDisplayed={reposOnPage}
-                        pageRangeDisplayed={3}
-                        onPageChange={handlePageClick}
-                        containerClassName={"page-number-block"}
-                        pageClassName={"page-number-block_item"}
-                    />
-
-                    {/* <img className='arrow-left arrow' src={arrow} alt="arrow" />
-                    <div className="page-number-block">
-                        <div className="page-number-block_item">1</div>
-                        <div className="page-number-block_item">...</div>
-                        <div className="page-number-block_item">{totalNumberPages}</div>
+                {numberOfRepos > 1 && <>
+                    <div className="count-items">1-{numberOfRepos} of {numberOfRepos} items</div>
+                    <div className="pages-block">
+                        {pagesTotal > 1 &&
+                            <ReactPaginate
+                                previousLabel={'<'}
+                                nextLabel={'>'}
+                                breakLabel={'...'}
+                                pageCount={pagesTotal}
+                                marginPagesDisplayed={reposOnPage}
+                                pageRangeDisplayed={2}
+                                onPageChange={handlePageClick}
+                                containerClassName={"page-number-block"}
+                                pageClassName={"page-number-block_item"}
+                                previousClassName={'arrow-left arrow'}
+                                nextClassName={'arrow-right arrow'}
+                                breakClassName={"page-number-block_item"}
+                                activeClassName={'active'}
+                            />}
                     </div>
-                    <img className='arrow-right arrow' src={arrow} alt="arrow" /> */}
-
-                </div>
-
+                </>
+                }
             </div>
         </div>
     );
