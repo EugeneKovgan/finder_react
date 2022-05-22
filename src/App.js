@@ -62,7 +62,7 @@ function App() {
                     )}
                 </>
             )}
-            <Footer />
+            {user && <Footer user={user} />}
         </div>
     );
 }

@@ -19,8 +19,11 @@ const Header = ({ onChange }) => {
     return (
         <div className='Header'>
             <div className='header__content-container'>
+
                 <div className='logo-img'>
-                    <img src={logo_git} alt='logo_git' />
+                    <a href="https://github.com/eugenekovgan" target="blank">
+                        <img src={logo_git} alt='logo_git' />
+                    </a>
                 </div>
                 <div className='header-search'>
                     <input

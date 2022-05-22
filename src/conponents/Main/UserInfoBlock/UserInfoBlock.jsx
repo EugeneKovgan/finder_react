@@ -6,7 +6,7 @@ const UserInfoBlock = ({ user, repo }) => {
     return (
         <div className='UserInfoBlock'>
             <UserInfo user={user} />
-            <Repositories repo={repo} />
+            <Repositories user={user} repo={repo} />
         </div>
     );
 };

@@ -1,7 +1,5 @@
 import './Main.scss';
 import UserInfoBlock from './UserInfoBlock/UserInfoBlock';
-import StartPage from './StartPage/StartPage';
-import UserNotFoundPage from './UserNotFoundPage/UserNotFoundPage';
 
 const Main = ({ user, repo }) => {
 

@@ -1,10 +1,9 @@
 import './Repositories.scss';
 import EmptyRepository from '../EmptyRepository/EmptyRepository';
 
-const Repositories = ({ repo }) => {
-    let counter = 0
+const Repositories = ({ user, repo }) => {
+    const numberOfRepos = user.public_repos
     let itemRepo = repo.map((item) => {
-        counter++
         return (
             <div className='RepositoryItem' key={item.id}>
                 <a href={item.clone_url} target="blank">
@@ -22,12 +21,14 @@ const Repositories = ({ repo }) => {
     return (
         <div className='Repositories'>
             <div className='repositories__container'>
-                {counter === 0 ? <EmptyRepository /> : <>
-                    <div className='repositories_title'>Repositories ({counter})</div>
+                {numberOfRepos === 0 ? <EmptyRepository /> :
+                    <>
+                        <div className='repositories_title'>Repositories ({numberOfRepos})</div>
 
-                    <div className='repositories_list'>
-                        {itemRepo}
-                    </div></>}
+                        <div className='repositories_list'>
+                            {itemRepo}
+                        </div>
+                    </>}
 
             </div>
         </div>
