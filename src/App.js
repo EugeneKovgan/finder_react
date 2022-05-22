@@ -1,18 +1,22 @@
 import './App.scss';
-import axios from 'axios';
 import Header from './conponents/Header/Header';
 import Footer from './conponents/Footer/Footer';
 import Main from './conponents/Main/Main';
 import StartPage from './conponents/Main/StartPage/StartPage';
 import UserNotFoundPage from './conponents/Main/UserNotFoundPage/UserNotFoundPage';
-import { useState } from 'react';
 import Loader from './conponents/Main/Loader/Loader';
+import axios from 'axios';
+import { useState } from 'react';
+import ReactPaginate from 'react-paginate';
 
 function App() {
     const [user, setUser] = useState('');
     const [repo, setRepo] = useState('');
     const [loading, setLoading] = useState(false);
     const [noUser, setNoUser] = useState(false);
+
+    const [reposOnPage] = useState(4);
+    const [currentPage, setCurrentPage] = useState(1);
 
     const sendRequest = async (value) => {
         try {
@@ -38,7 +42,7 @@ function App() {
             const response = await axios.get(`https://api.github.com/users/${value}/repos`);
             const repoGetedInfo = response.data;
 
-            console.log(repoGetedInfo);
+            // console.log(repoGetedInfo);
             setRepo(repoGetedInfo);
         } catch (e) {
             console.log(e);
@@ -62,7 +66,8 @@ function App() {
                     )}
                 </>
             )}
-            {user && <Footer user={user} />}
+
+            {user && !noUser && <Footer user={user} repo={repo} reposOnPage={reposOnPage} currentPage={currentPage} />}
         </div>
     );
 }
