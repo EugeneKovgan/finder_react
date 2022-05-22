@@ -6,13 +6,10 @@ import ReactPaginate from 'react-paginate';
 const Footer = ({ user, repo, reposOnPage, currentPage }) => {
 
     const numberOfRepos = user.public_repos;
-
     let pagesTotal = numberOfRepos / reposOnPage
-    // const [totalNumberPages, setTotalNumberPages] = useState('');
-    console.log(numberOfRepos)
-    console.log(reposOnPage)
+
     const handlePageClick = (data) => {
-        console.log(data.selected)
+        console.log(data.selected + 1)
     }
 
     return (
