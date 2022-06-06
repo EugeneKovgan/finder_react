@@ -1,4 +1,4 @@
-# [link_to](https://eugenekovgan.github.io/finder_react/)
+# [link_to](https://eugenekovgan.github.io/paralect_test/)
 
 # Getting Started with Create React App
 
